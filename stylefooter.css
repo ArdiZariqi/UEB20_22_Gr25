@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+
+}
+body{
+    background-color: #efefef;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.container{
+    width: 80%;
+    margin: 50px auto;
+}
+.footer-section{
+    width: 500px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 #999;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position:absolute;
+}
+form{
+    margin: 35px;
+}
+.hapesira{ 
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid  #df2d45;
+    border-radius: 14px;
+    outline: none;
+
+}
+.kontakti{
+    padding: 2px 60px;
+    font-size: 290%; 
+    font-family: Arial, Helvetica, sans-serif;
+    color:#df2d45;
+}
+.hapesira1{
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+.contact-box
+{
+    background: #fff;
+    display: flex;
+    
+}
+.contact-left
+{
+    flex-basis: 60%;
+    padding: 40px 60px;
+    
+}
+.contact-right
+{
+    flex-basis: 40%;
+    padding: 40px;
+    background-color: #df2d45;
+    margin-top: 5x;
+    color:#fff;
+    font-size: 105%;
+}
+.btn{
+    background-color: #df2d45;
+    cursor: pointer;
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid  #df2d45;;
+    border-radius: 14px;
+    outline: none;
+    color: white;
+}
+.btn:hover
+{
+    color: green;
+    background-color: lightcoral;
+}
+tr td:first-child{
+    padding-right: 20px;
+     
+}
+tr td{
+    padding-top: 20px;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding: 21px;
+    background-color: #fff;
+    margin:15px;
+    border-radius: 40%;
+    
+}
+.socialIcons a i{
+    font-size: 2em;
+    color:#df2d45;
+    opacity: 0.9;
+}
+.socialIcons a:hover{
+    background-color: #df2d45;
+    transition: 0.5s;
+
+}
+.socialIcons a:hover i{
+    color:#fff;
+    transition: 0.5s;
+}
