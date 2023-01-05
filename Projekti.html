@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+    <title>5A Technology - Trajnime profesionale ne fushen e TI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Trajnime ne fushen e IT">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Dizajn Grafik, ">
+    <style>
+    
+        .maindiv {
+            height: 650px;
+            background-image: url("Foto5.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;       
+            width: 100%;     
+        }
+
+        .div1 {
+            margin: 100px;
+            margin-left: 200px;
+            padding-left: 100px;
+            color: white;
+            font-weight: bold;
+            font-size: large;
+        }
+        
+        input[type=text],input[type=email],input[type=tel], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #df2d45;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #7f3223;
+        }
+
+        .formdiv {
+            margin: 100px;
+            margin-right: 280px;
+            border-radius: 5px;
+            background-color: #1014936b;
+            padding-inline: 50px;
+            float: left;
+            width: 100%;
+        }
+        
+        h1, h2 {
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="maindiv">
+            <div class="div1">
+                <h1>Trajnim & Praktikë</h1>
+                <div>
+                    <p> <abbr title="Besa institute of Technology">B.I.T</abbr> është qendër e trajnimeve profesionale,
+                        e fokusuar në përgatitjen e pjesëmarrësve me shkathtësi të avancuara praktike 
+                        në profesionet më të kërkuara aktualisht në tregun vendor dhe ndërkombëtar të punës.
+                    </p>
+                    <p>
+                        Pas përfundimit të çdo trajnimit, pjesëmarrësit fitojnë mundësinë që të fitojnë 
+                        shkathtësi të nivelit më të lartë përmes praktikës profesionale, 
+                        e cila ofrohet në njërën nga kompanitë tona partnere, 
+                        përmes kryerjes së projekteve reale nën mentorimin e vazhdueshëm të trajnerëve.
+                    </p>
+                </div>
+            </div>
+            <div class="formdiv">
+                <h2>Apliko Tani</h2>
+                <form>
+                    <label for="emri"></label>
+                    <input type="text" id="emri" maxlength="50" placeholder="Emri" required/>
+                    <input type="email" id="email" required placeholder="Email" />
+                    <input type="tel" id="tel" pattern="[3-9]{1}-[0-9]{6}" required placeholder="Tel."/>
+                    <Select id="Trajnimet" name="Trajnimet">
+                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="Java">Java</option>
+                        <option value="Dizajn Grafik">Dizajn Grafik</option>
+                        <option value="Python">Python</option>
+                        <option value="Full stack">Full stack</option>
+                    </Select>
+                    <input type="submit" id="submit" value="Apliko"/>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
