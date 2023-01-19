@@ -1,6 +1,7 @@
 <!DOCTYPE html>
     <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Apliko tani</title>
         <link rel="stylesheet" type="text/css" href="stylefooter.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
@@ -9,7 +10,7 @@
 
         <style>
         
-            .search-form{
+        .search-form{
                 margin-top:15px;
                 float:right;
                 margin-right:100px;
@@ -79,6 +80,10 @@
             .formdiv {
                 margin: 100px 400px;
                 background-color: #3c3f976b;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: center;
                 padding: 50px;
                 float: left;
                 width: 100%;
@@ -119,7 +124,7 @@
             </li>
             <li><a href="#about">Graphic Design</a></li>
             <li><a href="#">Apply here</a></li>
-            <li><a href="file:///C:/Users/Albert/Desktop/FIEK/FIEK-II/Web%201/ushtrime_web1/Projekti/LogIn.html?#">Log In</a></li>
+            <li><a href="C:\Users\Albert\Desktop\FIEK\FIEK-II\Semestri_3\Web 1\Projekti\LogIn.html">Log In</a></li>
         </ul>
         </div>
         <main>
@@ -129,19 +134,21 @@
                         <h2 style="font-weight: bold;">Apliko Tani</h2>
                         <p >Plotësoni formën në vijim me informatat tuaja dhe për cilin trajnim jeni të interesuar.</p>
                     </div>
-                    <form>
-                        <input type="text" class="inputtext" id="emri" maxlength="50" placeholder="Emri" required/>
-                        <input type="email" class="inputemail" id="email" required placeholder="Email" />
-                        <input type="tel" class="inputtel" id="tel" pattern="04[3-9][0-9]{6}" required placeholder="Tel."/>
-                        <Select id="Trajnimet" class="select" name="Trajnimet">
-                            <option value="Digital Marketing">Digital Marketing</option>
-                            <option value="Java">Java</option>
-                            <option value="Dizajn Grafik">Dizajn Grafik</option>
-                            <option value="Python">Python</option>
-                            <option value="Full stack">Full stack</option>
-                        </Select>
-                        <input type="submit"class="submit" id="submit" value="Apliko"/>
-                    </form>
+                    <div>
+                        <form>
+                            <input type="text" class="inputtext" id="emri" maxlength="50" placeholder="Emri" required/>
+                            <input type="email" class="inputemail" id="email" required placeholder="Email" />
+                            <input type="tel" class="inputtel" id="tel" pattern="04[3-9][0-9]{6}" required placeholder="Tel."/>
+                            <Select id="Trajnimet" class="select" name="Trajnimet">
+                                <option value="Digital Marketing">Digital Marketing</option>
+                                <option value="Java">Java</option>
+                                <option value="Dizajn Grafik">Dizajn Grafik</option>
+                                <option value="Python">Python</option>
+                                <option value="Full stack">Full stack</option>
+                            </Select>
+                            <input type="submit"class="submit" id="submit" value="Apliko"/>
+                        </form>
+                    </div>
                 </div>
             </div>
         </main>

@@ -90,6 +90,35 @@
     color:red;
 }
 
+/*per search*/
+.search-form{
+   margin-top:15px;
+   float:right;
+   margin-right:100px;
+   border: radius 1p   
+}
+
+.search-form input[type=text] {
+    padding:7px;
+    border:none;
+    font-size:16px;
+    font-family:sans-serif;
+} 
+
+.search-form button{
+    float:right;
+    background:black;
+    color:white;
+    border-radius:0 5px 5px 0;
+    cursor:pointer;
+    position:relative;
+    padding:7px;
+    font-family:sans-serif;
+    border:none;
+    font-size:16px;
+
+ }
+
 
 .foto{
     
@@ -432,7 +461,7 @@ tr td{
 
 /*Per pjesen java*/
 .heading{
-    background-color:#D93D66;
+    background-color:#df2d45;
     font-size:25px;
     text-align:center;
     padding:100px;
