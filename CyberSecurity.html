@@ -12,20 +12,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="js/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="stylefooter.css">
+    <link rel="stylesheet" type="text/css" href="projectstyle.css">
+    <script src="js1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js" integrity="sha512-nO7wgHUoWPYGCNriyGzcFwPSF+bPDOR+NvtOYy2wMcWkrnCNPKBcFEkU80XIN14UVja0Gdnff9EmydyLlOL7mQ==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="projekti.js" type="text/javascript"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     </head>
 
     <body>
         <header style="background-color:#df2d45">
             <div id="container" style="margin-left:100px">
                 <img src="Logo.png" alt="logo" width="90px" height="90px">   
-                <p style="margin-left:10px;"  >Besa Institute of Technology</p>
+                <p style="margin-left:10px;" class="texti1" >Besa Institute of Technology</p>
             </div>
             <form class="search-form"> 
                 <input type="text" placeholder="Search.." name="search"> 
@@ -34,35 +37,36 @@
         </header>
         <div class="menu"> 
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#news">About</a></li>
-              <li><a href="#contact">Digital Marketing</a></li>
+              <li><a href="Home.html">Home</a></li>
+              <li><a href="aboutUs1.html">About</a></li>
               <li><a href="#contact">Programming</a>
                 <div class="nen-menu">
                     <ul>
-                        <li><a href="#">Java</a></li>
-                        <li><a href="#">Full Stack</a></li>
-                        <li><a href="#">Python</a></li>
-                        <li><a href="#">Mobile app</a></li>
-                        <li><a href="#about">Graphic Design</a></li>
+                        <li><a href="CyberSecurity.html">CyberSecurity</a></li>
+                        <li><a href="FullStackDevelopment.html">Full Stack</a></li>
+                        <li><a href="Python.html">Python</a></li>
+                        <li><a href="MobileApp.html">Mobile app</a></li>
+                        <li><a href="DigitalMarketing.html">Digital Marketing</a></li>
+                        <li><a href="GraphicDesign.html">Graphic Design</a></li>
                     </ul>
                 </div>
                 </li>
-                <li><a href="#">Apply here</a></li>
-                <li><a href="#">Info</a></li>
-                <li><a href="#">Log In</a></li>
+                <li><a href="aplikoTani.html">Apply here</a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="LogIn.html">Log In</a></li>
             </ul>
         </div>
-
         <section id="blog" class="blog">
             <div class="container" data-aos="fade-up">
         <div class="container">
             <div class="row g-5">
             <div class="col-lg-8">
                 <article class="blog-details">
-                    <div class="post-img">
+                    <div class="post-img" id="contenti1">
                         <img src="img/sybersecurity.jpg" alt="" class="img-fluid">
                     </div>
+                    <button class="buttoni2" id="buttton">Minimizo</button>
+                    <button class="buttoni2" id="butttoni">Me shume</button>
 
                     <h2 class="title">Përshkrimi</h2>
                     <div class="content">
@@ -122,26 +126,74 @@
                         <li><a href="MobileApp.html" style="color:aqua">Mobile APP </a></li><br>
                       </ul>
                     </div>
-
+                    <h2 class="sidebar-title" id="categories-title" style="color:aliceblue">Çfare perfshihet?</h2>
                     <div class="sidebar-item categories">
-                        <h2 class="sidebar-title" style="color:aliceblue">Çfarë përfshihet</h2>
-                        <ul class="mt-3">
-                            <li>Mentorim</li>
-                            <li>Qasje në tablet/smartphone</li>
-                            <li>Certifikata e zotërimit të kursit</li>
-                            <li>Përgatitje falas për provimin</li>
-                            <li>Karta e Studentit</li>
-                            <li>Kurse online</li>
-                            <li>Kurse fizikisht</li>
-                        </ul>
+                        <ul id="categories-list" class="mt-3"></ul>
+                        <br/>
+                        <br/>
                     </div>
+                    
+                    <div class="sidebar-item training-schedule">
+                        <h2 class="sidebar-title" style="color:aliceblue">Orari i trajnimeve</h2><br>
+                        <table class="table table-bordered, table table-hover" id="schedule-table" style="color:aliceblue">
+                            <thead>
+                                <tr>
+                                    <th>Trajnimi</th>
+                                    <th>Dita</th>
+                                    <th>Ora</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Digital Marketing</td>
+                                    <td>Monday, Wednesday, Friday</td>
+                                    <td>9:00 AM - 12:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Graphic Design</td>
+                                    <td>Monday, Wednesday, Friday</td>
+                                    <td>1:00 PM - 4:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Full Stack Development</td>
+                                    <td>Tuesday, Thursday, Saturday</td>
+                                    <td>6:00 PM - 9:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Java Programming</td>
+                                    <td>Tuesday, Thursday, Saturday</td>
+                                    <td>9:00 AM - 2:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Mobile App</td>
+                                    <td>Every Saturday</td>
+                                    <td>9:00 AM - 4:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Python Programming</td>
+                                    <td>Monday, Wednesday, Friday</td>
+                                    <td>6:00 PM - 9:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Cyber Security</td>
+                                    <td>Monday, Wednesday, Friday</td>
+                                    <td>6:00 PM - 9:00 PM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                    </div>
+                    <button id="btn22">Largo</button>
+        
+            </div>
+        </div>
+    
 
-                
-            </div>
-            </div>
+        </div>
         </div>
         </div>
         </section>
+
 
         <footer >
             <div class="container">

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Trajnime ne fushen e IT">
     <meta name="keywords" content="HTML, CSS, JavaScript, Dizajn Grafik, ">
+    <script src="js1.js"></script>
     <style>
     
         .maindiv {
@@ -69,6 +70,11 @@
             text-align: center;
             font-weight: bold;
         }
+
+        .error {
+            color: red;
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
@@ -92,19 +98,23 @@
             </div>
             <div class="formdiv">
                 <h2>Apliko Tani</h2>
-                <form action="mailto:zariqiardi@gmail.com" method="post" enctype="text/plain">
-                    <label for="emri"></label>
+                <form id="myForm" enctype="text/plain">
                     <input type="text" id="emri" maxlength="50" placeholder="Emri" required/>
-                    <input type="email" id="email" required placeholder="Email" />
-                    <input type="tel" id="tel" pattern="04[3-9][0-9]{6}" required placeholder="Tel."/>
+                    <div id="emriError" class="error"></div>
+                    <input type="email" id="email" placeholder="Email" required/>
+                    <div id="emailError" class="error"></div>
+                    <input type="tel" id="tel" pattern="04[3-9][0-9]{6}" placeholder="Tel." required/>
+                    <div id="telError" class="error"></div>
                     <Select id="Trajnimet" name="Trajnimet">
+                        <option value="Zgjedhni trajnimin">Zgjedhni trajnimin</option>
                         <option value="Digital Marketing">Digital Marketing</option>
                         <option value="Java">Java</option>
                         <option value="Dizajn Grafik">Dizajn Grafik</option>
                         <option value="Python">Python</option>
                         <option value="Full stack">Full stack</option>
                     </Select>
-                    <input type="submit" id="submit" value="Apliko"/>
+                    <div id="selectError" class="error"></div>
+                    <input type="submit" id="submit" value="Apliko" onclick="submitForm(event)"/>
                 </form>
             </div>
         </div>

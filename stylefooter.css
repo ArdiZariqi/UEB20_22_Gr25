@@ -3,6 +3,19 @@
     margin: 0; 
 }
 
+#container{
+    display: flex;
+    align-items: center;
+    font-size: 30px; 
+    font-weight: bolder;
+    text-align: center; 
+    display: inline-flex;
+    color: black;
+    font: "Copperplate",sans-serif;
+    font-style: italic ;
+    margin-left: 100px;
+}
+
 .container{
     display: flex;
     width: 100%;
@@ -131,19 +144,7 @@ tr td{
    
     
 }
-#container{
-    display:flex;
-    align-items:center;
-    font-size:30px; 
-    font-weight:bolder;
-    text-align:center; 
-    display:inline-flex;
-    color:black;
-    font: "Copperplate",sans-serif;
-    font-style:italic ;
-    
-    
-}
+
 .menu{
     background-color:white;
     text-align: center;
@@ -219,6 +220,105 @@ tr td{
 }
 .menu  li:hover .nen-menu ul li a:hover{
     color:red;
+}
+.menu{
+    background-color:white;
+    text-align: center;
+
+}
+ .menu ul{
+    display:inline-flex;
+    list-style:none;
+    color:#fff;
+    overflow: hidden;
+
+}
+.menu ul li{
+    width:185px;
+    font-size:large;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.menu li a {
+    display: block;
+    color:black;
+    text-align: center;
+    padding:15px;
+    font-weight:bolder;
+    text-decoration:none;
+}
+
+.menu li a:hover{
+    color:red;
+    text-decoration: underline;
+    font-family:'Times New Roman';
+    font-size:large;
+    font-weight: bolder;
+}
+
+.nen-menu{
+    display:none;
+
+}
+
+.menu ul li:hover .nen-menu{
+    display:block;
+    position:absolute;
+    background-color:white;
+}
+.menu ul li:hover .nen-menu ul{
+    display:block;
+    margin:0;
+
+}
+.menu  li:hover .nen-menu ul li{
+    width:150px;
+    padding:0;
+    border:0;
+    
+    border-bottom: 2px dotted black;
+    background:transparent;
+    border-radius:0;
+    text-align:left;
+    
+
+}
+.menu  li:hover .nen-menu ul li:last-child
+{
+    border-bottom:none;       /*Me hjek kufizimin te kategoria e fundit*/
+   
+}
+.menu  li:hover .nen-menu ul li a:hover{
+    color:red;
+}
+
+/*per search*/
+.search-form{
+   margin-top:15px;
+   float:right;
+   margin-right:100px;
+   border: radius 1p   
+}
+
+.search-form input[type=text] {
+    padding:7px;
+    border:none;
+    font-size:16px;
+    font-family:sans-serif;
+} 
+
+.search-form button{
+    float:right;
+    background:black;
+    color:white;
+    border-radius:0 5px 5px 0;
+    cursor:pointer;
+    position:relative;
+    padding:7px;
+    font-family:sans-serif;
+    border:none;
+    font-size:16px;
 }
 
 .teksti{

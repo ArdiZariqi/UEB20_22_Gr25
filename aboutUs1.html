@@ -1,341 +1,482 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist">
-    <link href="projectstyle.css" rel="stylesheet" > 
-    <link rel="stylesheet" href="projectstyle.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js" integrity="sha512-nO7wgHUoWPYGCNriyGzcFwPSF+bPDOR+NvtOYy2wMcWkrnCNPKBcFEkU80XIN14UVja0Gdnff9EmydyLlOL7mQ==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="projekti.js" type="text/javascript"></script>
-    <style>
-      .search-form{
-        margin-top:15px;
-        float:right;
-        margin-right:100px;
-        border: radius 1px;
-      }
-      .search-form input[type=text]
-      {
-           padding:7px;
-           border:none;
-           font-size:16px;
-           font-family:sans-serif;
-      } 
-      .search-form button{
-        float:right;
-        background:black;
-        color:white;
-        border-radius:0 5px 5px 0;
-        cursor:pointer;
-        position:relative;
-        padding:7px;
-        font-family:sans-serif;
-        border:none;
-        font-size:16px;
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist">
+        <link rel="stylesheet" href="projectstyle.css">
+        <link rel="stylesheet" href="stylefooter.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js" integrity="sha512-nO7wgHUoWPYGCNriyGzcFwPSF+bPDOR+NvtOYy2wMcWkrnCNPKBcFEkU80XIN14UVja0Gdnff9EmydyLlOL7mQ==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="projekti.js"></script>
+        <script src="js2.js"></script>
+        <style>
+            @font-face {
+            font-family: "Bitstream Vera Serif Bold";
+            src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
+            }
 
-      } 
-    </style>
+            .search-form{
+                margin-top:15px;
+                float:right;
+                margin-right:100px;
+                border: radius 1px;
+            }
+            .search-form input[type=text]
+            {
+                padding:7px;
+                border:none;
+                font-size:16px;
+                font-family:"Bitstream Vera Serif Bold", serif;
+            } 
+            .search-form button{
+                float:right;
+                background:black;
+                color:white;
+                border-radius:0 5px 5px 0;
+                cursor:pointer;
+                position:relative;
+                padding:7px;
+                font-family:sans-serif;
+                border:none;
+                font-size:16px;
+            
+            } 
+            .butoni{
+                background-color: #df2d45;
+                cursor: pointer;
+                width: 400px;
+                height: 40px;
+                margin-top: 20px;
+                padding-left: 10px;
+                padding-right: 10px;
+                border: 1px solid  #df2d45;;
+                border-radius: 14px;
+                outline: none;
+                color: white;
+                font-size:20px;
 
-</head>
-<body >
-    <header class="header" style="background-color:#df2d45">
-        <div id="container">
-            <img src="Logo.png" alt="logo" width="90px" height="90px">   
-            <p style="margin-left:10px;"  >Besa Institute of Technology</p>
-        </div>
+            }
+            .butoni:hover{
+                color: green;
+                background-color: lightcoral;
+            }
+        
+            .butoni1{
+                background-color: #df2d45;
+                cursor: pointer;
+                width: 200px;
+                height: 40px;
+                margin-bottom: 20px;
+                margin-top: 3px;
+                padding-left: 10px;
+                padding-right: 10px;
+                border: 1px solid  #df2d45;;
+                border-radius: 14px;
+                outline: none;
+                color: white;
+                font-size:20px;
+
+            }
+            .butoni1:hover{
+                color: green;
+                background-color: lightcoral;
+            }
+            #training-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 50px 0;
+            }
+            #training-table th, #training-table td {
+                padding: 12px 15px;
+                text-align: left;
+                border: 1px solid #e9e9e9;
+            }
+            #training-table thead tr {
+                background-color: #f5f5f5;
+            }
+            #training-table thead tr th {
+                font-size: 18px;
+                font-weight: 600;
+                color: #333;
+                text-transform: uppercase;
+            }
+            #training-table tbody tr:nth-child(odd) {
+                background-color: #f9f9f9;
+            }
+            #training-table tbody tr:hover {
+                background-color: #f0f0f0;
+            }
+
+            .p {
+                font-size: larger;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+        <header class="header" style="background-color:#df2d45">
+            <div id="container">
+                <img src="Logo.png" alt="logo" width="90px" height="90px">   
+                <p style="margin-left:10px;" class="texti1">Besa Institute of Technology</p>
+            </div>
             <form class="search-form" action="#"> 
                 <input type="text" placeholder="Search.." name="search"> 
                 <button>Search</button>
             
-
+            
             </form>
-    
-        
-      </header>
- <div class="menu"> 
-    <ul >
-      
-      <li><a href="#home">Home</a></li>
-      <li><a href="#news">About</a></li>
-      <li><a href="#contact">Digital Marketing</a>
-      <li><a href="#contact">Programming</a>
-        <div class="nen-menu">
+        </header>
+    </nav>
+        <div class="menu"> 
             <ul>
-                <li><a href="#">Java</a></li>
-                <li><a href="#">Full Stack</a></li>
-                <li><a href="#">Python</a></li>
-                <li><a href="#">Mobile app</a></li>
+              <li><a href="Home.html">Home</a></li>
+              <li><a href="aboutUs1.html">About</a></li>
+              <li><a href="#contact">Programming</a>
+                <div class="nen-menu">
+                    <ul>
+                        <li><a href="CyberSecurity.html">CyberSecurity</a></li>
+                        <li><a href="FullStackDevelopment.html">Full Stack</a></li>
+                        <li><a href="Python.html">Python</a></li>
+                        <li><a href="MobileApp.html">Mobile app</a></li>
+                        <li><a href="DigitalMarketing.html">Digital Marketing</a></li>
+                        <li><a href="GraphicDesign.html">Graphic Design</a></li>
+                    </ul>
+                </div>
+                </li>
+                <li><a href="aplikoTani.html">Apply here</a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="LogIn.html">Log In</a></li>
             </ul>
         </div>
-    </li>
-    <li><a href="#about">Graphic Design</a></li>
-    <li><a href="#">Apply here</a></li>
-    <li><a href="#">Log In</a></li>
-
-    </ul>
-</div>  
-
-
-<div style="background-color:white">
-<div class="foto">
-  <img src="img/sybersecurity.jpg" alt="Foto per trajnime" height="510" width="1350" style="border: radius 10px;"/>
-</div>
-  
-<!-- <div class="teksti">
-  <div class="margins">
-    <h1 style="text-align:center">Kush jemi ne?</h1></br>
-<p><b><i><u>Besa Institute of Technology</u></i></b> është qendër e trajnimeve profesionale, e specializuar në përgatitjen e pjesëmarrësve me njohuri praktike në secilin trajnim,   tërësisht të bazuara në kërkesat e tregut aktual vendor dhe ndërkombëtar të punës.
-    Konform kërkesave të vazhdueshme, ne jemi zgjeruar dhe po vazhdojmë të zgjerohemi me trajnime në fushën e teknologjisë informative dhe jo vetëm, duke e shtrirë ekspertizën në dhjetëra trajnime, si: Marketing Digjital, Dizajn Grafik, Video Animation, Video Editing, Web Development, Python, Java, Siguri Kibernetike, Mobile App Development, etj.
-    Pas përfundimit të çdo trajnimit, pjesëmarrësit fitojnë mundësinë që të fitojnë shkathtësi të nivelit më të lartë përmes praktikës profesionale, e cila ofrohet në njërën nga kompanitë tona partnere, përmes kryerjes së projekteve reale nën mentorimin e vazhdueshëm të trajnerëve.
-</br></br>Cilësia është ajo që tani e dy vite na ka garantuar rritjen konstante dhe ne jemi përpjekur vazhdimisht që rritjen e numrave ta përkthejmë në rritje të shumëllojshmërisë në përzgjedhje, për të ofruar mundësi sa më të shumta për pjesëmarrësit.
-</br></br>Deri tani formimin e tyre profesional ia kanë besuar Besa Institute of Technology mbi 1,500 persona të grupmoshave dhe profesioneve të ndryshme nga Kosova, Shqipëria, Maqedonia e Veriut, Presheva, Medvegja, Plavës dhe Gucisë.
-    Kurrikulat tona janë të përshtatura 100% në sistemin e mësimit ‘Learning by Doing’, ku çdo gjë që mësohet praktiktohet aty për aty.
-</br></br>Atë që ne e konsiderojmë si një nga arritjet më të larta në secilin trajnim është fakti që në secilën fushë kemi pasur të rinj që, nga Evropa dhe SHBA kanë përfunduar trajnime online dhe tashmë janë sistemuar me shumë sukses në tregun e punës.
-    Ajo se çfarë jemi munduar ta realizojmë si Besa Institute of Technology është që vazhdimisht t’i ndjekim trendet dhe t’i përditësojmë pjesëmarrësit me zhvillimet e fundit në botën e TIK-ut, veçanërisht në fushat tona të ekspertizës, për të cilat edhe ofrojmë trajnime. Në formë shumë unike, aktualisht trajnimet i kemi të kombinuara në formatin fizik dhe online të mësimit, me nivelin e njëjtë të angazhimit dhe cilësisë.
-</br></br> Rrugëtimi ynë me studentët nuk përfundon pas dy muajsh, por vazhdon derisa pjesëmarrësit të jenë 100% të gatshëm për tregun e punës, si dhe duke i mbështetur vazhdimisht në të gjitha etapat deri tek punësimi.
-</p>
-</div>
-</div>-->
-<section id="about">
-    <div class="about-1">
-        <h1>Kush jemi ne?</h1></br>
-        <p>Besa Institute of Technology është qendër e trajnimeve profesionale, e 
-            specializuar në përgatitjen e pjesëmarrësve me njohuri praktike në secilin trajnim,   tërësisht 
-            të bazuara në kërkesat e tregut aktual vendor dhe ndërkombëtar të punës.Konform kërkesave të vazhdueshme,
-            ne jemi zgjeruar dhe po vazhdojmë të zgjerohemi me trajnime në fushën e teknologjisë informative dhe jo vetëm,
-            duke e shtrirë ekspertizën në dhjetëra trajnime, si: Marketing Digjital, Dizajn Grafik, Video Animation, Video Editing,
-            Web Development, Python, Java, Siguri Kibernetike, Mobile App Development, etj.Kurrikulat tona janë të përshtatura 100% 
-            në sistemin e mësimit ‘Learning by Doing’, ku çdo gjë që mësohet praktiktohet aty për aty.
-        </p></br></br>
-        <p>Në videon të cilën mund ta ndiqni më poshtë janë paraqitur disa detaje shtesë lidhur me qendrën tonë të 
-            trajnimeve Besa Institute of Technology</p>
-        <div id="videobox">
-        <iframe width="750" height="485" src="https://www.youtube.com/embed/teUN0BJut3o" title="YouTube video player" 
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen></iframe>
-        </div><br></br>
-        <p>Mëposhtë gjeni një përshkrim më të hollësishëm të stafit tonë si dhe mendimet e disa studentëve të cilët ishin pjesë e kësaj
-            qendre të trajnimeve lidhur me përvojën e tyre në Besa Institute of Technology.</p>
+        <div style="background-color:white">
+            <div class="foto" id="pho" style="border-radius:20px;">
+              <img src="img/sybersecurity.jpg" alt="Foto per trajnime" height="510" width="1350" style="border: radius 10px;"/>
+            </div>
+            <section id="about">
+                <div class="about-1">
+                    <h1>Kush jemi ne?</h1></br>
+                    <p>Besa Institute of Technology është qendër e trajnimeve profesionale, e 
+                        specializuar në përgatitjen e pjesëmarrësve me njohuri praktike në secilin trajnim,   tërësisht 
+                        të bazuara në kërkesat e tregut aktual vendor dhe ndërkombëtar të punës.Konform kërkesave të vazhdueshme,
+                        ne jemi zgjeruar dhe po vazhdojmë të zgjerohemi me trajnime në fushën e teknologjisë informative dhe jo vetëm,
+                        duke e shtrirë ekspertizën në dhjetëra trajnime, si: Marketing Digjital, Dizajn Grafik, Video Animation, Video Editing,
+                        Web Development, Python, Java, Siguri Kibernetike, Mobile App Development, etj.Kurrikulat tona janë të përshtatura 100% 
+                        në sistemin e mësimit ‘Learning by Doing’, ku çdo gjë që mësohet praktiktohet aty për aty.
+                    </p></br></br>
+                    <p>Në videon të cilën mund ta ndiqni më poshtë janë paraqitur disa detaje shtesë lidhur me qendrën tonë të 
+                        trajnimeve Besa Institute of Technology</p>
+                    <div id="videobox">
+                    <iframe width="750" height="485" src="https://www.youtube.com/embed/teUN0BJut3o" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen></iframe>
+                    </div>
+                    <br></br>
+                    <p>
+                        M&#235;poshtë gjeni një &ccedil;mimore për modulet që ne i ofrojmë, një përshkrim më të hollësishëm të stafit tonë 
+                        si dhe mendimet e disa studentëve të cilët ishin pjesë e kësaj
+                        qendre të trajnimeve lidhur me përvojën e tyre në Besa Institute of Technology.
+                    </p>
+                    <br/>
+                    <br/>
+                    <div>
+                        <p class="p">Çmimet per module</p>
+                        <table id="training-table">
+                            <thead>
+                                <tr>
+                                    <th>Moduli</th>
+                                    <th>Koh&#235;zgjatja</th>
+                                    <th>&Ccedil;mimi per muaj</th>
+                                    <th>&Ccedil;mimi Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cyber Security</td>
+                                    <td>3</td>
+                                    <td>60</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Full Stack Development</td>
+                                    <td>4</td>
+                                    <td>60</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Python</td>
+                                    <td>4</td>
+                                    <td>70</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Mobile App</td>
+                                    <td>4</td>
+                                    <td>65</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Digital Marketing</td>
+                                    <td>3</td>
+                                    <td>55</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Graphic Design</td>
+                                    <td>4</td>
+                                    <td>65</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                <div>
+                    <div class="about-item" id="njeshi">
+                        <i class="fa fa-book" ></i>
+                        <h2>Misioni</h2>
+                        <hr>
+                        <p >
+                            Misioni ynë si Besa Institute of Technology është që në mënyrën më të mirë të mundshme të i 
+                            përgatisim studentët tanë për tregun e punës lidhur me shërbimet të cilat i ofrojmë si dhe 
+                            çdo herë të jemi në trend me zhvillimet e reja në këtë fushë.
+                        </p>
+                    </div>
+                        <button class="butoni1">Misioni ynë</button>
+                        <button class="butoni1" id="largo1">Largo</button>
+                    <div class="about-item" id="secondd">
+                        <i class="fa fa-book"></i>
+                            <h2>Objektivat</h2>
+                            <hr>
+                            <p>
+                                Objektiva jonë kryesore si Besa Institute of Technology është që në një periudhë të afërt 
+                                të bëhemi një nga qendrat profesionale më të mira në vend dhe jashtë si dhe gjithashtu të
+                                ofrojmë sa më shumë programe studimi lidhur me fushë në t ë cilën jemi të thirrur.
+                            </p>
+                    </div>
+                    <button class="butoni1">Objektivat</button>
+                    <button class="butoni1" id="largo2">Largo</button>
+                    <div class="about-item" id="third">
+                        <i class="fa fa-book"></i>
+                        <h2>Të arriturat</h2>
+                        <hr>
+                        <p>
+                            Deri tani formimin e tyre profesional ia kanë besuar Besa Institute of Technology mbi 1,500 persona 
+                            të grupmoshave dhe profesioneve të ndryshme nga të gjitha viset shqiptare.
+                            Atë që ne e konsiderojmë si një nga arritjet më të larta në secilin trajnim është fakti që në 
+                            secilën fushë kemi pasur të rinj që, nga Evropa dhe SHBA kanë përfunduar trajnime online dhe tashmë janë 
+                            sistemuar me shumë sukses në tregun e punës.
+                        </p>
+                    </div>
+                    <button class="butoni1">Të arriturat</button>
+                    <button class="butoni1" id="largo3">Largo</button>
+                    <svg height="300" width="400" style="margin-left: 60px; margin-top:auto">
+                        <defs>
+                          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%"
+                            style="stop-color:#df2d45;stop-opacity:1" />
+                            <stop offset="100%"
+                            style="stop-color:lightcoral;stop-opacity:1" />
+                          </linearGradient>
+                        </defs>
+                        <ellipse cx="200" cy="140" rx="170" ry="110" fill="url(#grad1)" />
+                        <text fill="#ffffff" font-size="45" font-family="Verdana"
+                        x="140" y="155" style="font-weight: bold;">B.I.T</text>
+                      Sorry, your browser does not support inline SVG.
+                      </svg>
+                </div>
+            </section>
+            <div class="ourteam">
+                <div class="ourteam-body">
+                    <h1 id="ekipi">Our Team</h1>
+                </div>
+                <div class="body" id="body1">                
+                    <div class="teams" >
+                        <img class="img" src="https://media.istockphoto.com/id/856599656/photo/passport-picture-of-a-smiling-turkish-businesswoman.jpg?s=612x612&w=0&k=20&c=dgETy-9neViQs7SATDTOOa80QOhVFcLIomBFRxWVN_8=" height="220px" width="180px">
+                        <div class="name"><h2>Arijesa Muja</h2></div>
+                        <div class="working"><h3>Senior JavaScript Engineer</h3></div>
+                        <div class="desription">Inxhiniere e JavaScript me përvojë shumëvjecare, e cila aktualisht është duke mbajtur trajnime rreth kësaj gjuhe skriptuese.</div>
+                    </div>
+                    <div class="teams" >
+                        <img class="img" src="https://media.istockphoto.com/id/515630181/photo/portrait-of-a-smiling-woman-in-a-blue-shirt.jpg?s=612x612&w=0&k=20&c=NbRbAUPtralJJkkWpTxmFnyb_0x241dpbMd4pRjGe84="height="220px"  width="180px"> 
+                        <div class="name"><h2>Agnesa Jashanica</h2></div>
+                        <div class="working"><h3>Python Development</h3></div>
+                        <div class="desription">Inxhiniere softueri me përvojë 4 vjeçare në programim. Aktualisht është duke punuar si Python Developer në B.I.T.</div>
+                    </div>
+                    <div class="teams" >
+                        <img class="img"  src="https://thumbs.dreamstime.com/b/photo-document-passport-id-mature-caucasian-man-suit-white-shirt-126121929.jpg" height="220px" width="180px"> 
+                        <div class="name"><h2>Arianit Gashi</h2></div>
+                        <div class="working"><h3>Graphic Designer</h3></div>
+                        <div class="desription">Graphic Designer me përvojë 10 vjeçare. Aktualisht është duke punuar me Adobe Photoshop dhe Adobe Ilustrator.</div>
+                    </div>
+                    <div class="teams" >
+                        <img class="img" src="https://thumbs.dreamstime.com/b/passport-document-id-photo-business-man-portrait-119717703.jpg" height="220px" width="180px"> 
+                        <div class="name"><h2>Ardit Gjyrevci</h2></div>
+                        <div class="working"><h3>Security Engineer</h3></div>
+                        <div class="desription">Security Engineer me përvojë shumëvjeçare si në Web Security, App Security në “3cis j.s.c". Aktualisht duke punuar si Software Security. </div>
+                    </div>
+                    <div class="teams" >
+                        <img class="img"  src="https://us.123rf.com/450wm/stylephotographs/stylephotographs2004/stylephotographs200401182/stylephotographs200401182.jpg?ver=6" height="220px" width="180px"> 
+                        <div class="name"><h2>Ardi Zariqi</h2></div>
+                        <div class="working"><h3>IOS Development</h3></div>
+                        <div class="desription">Zhvillues i aplikacioneve IOS me përvojë 5 vjeçare. Punoi me aplikacione të njohura ndërkombëtare.</div>
+                    </div>
+                    <div class="teams" >
+                        <img class="img"  src="https://st4.depositphotos.com/35580620/38766/i/600/depositphotos_387663176-stock-photo-photobooth-portrait-beautiful-brunette-caucasian.jpg" height="220px" width="180px"> 
+                        <div class="name"><h2>Aferdita Kryeziu</h2></div>
+                        <div class="working"><h3>HTML5 Engineer</h3></div>
+                        <div class="desription">Eksperte e gjuhës skriptuese HTML me më shumë se 7 vite përvojë pune, mësimdhënie në nivel akademik. ​</div>
+                    </div>
+                </div>
+                <button class="butoni" id="btn1">Hide</button>
+                <button class="butoni" id="btn2">Show</button>
+            </div>
+        </div>
+            <div class="title"><h1 id="studentat">What our Students Say</h1></div>
+            <div class="container">
+                <div class="sheader">
+                    <div class="sheader-text">
+                        <div class="text active-text">
+                            <p>
+                               "Ky trajnim më ka ndihmuar që të përvetësoj njohuritë bazë në JavaScript. Kënaqësi ishte të jem tek B.I.T me një trajnere të mrekullueshme".
+                            </p>
+                            <SPAN><br><br><br>
+                                Urim Kelmendi
+                            </br></br></br>
+                            </SPAN>
+                        </div>
+                        <div class="text">
+                            <p>
+                               "Trajnimi ne B.I.T ka qenë një ekperiencë mahnitëse. Kam mësuar shumë gjëra të shpjeguara në mënyrë të përkryer. Ky trajnim mbi të gjitha më ka ndihmuar të gjej veten dhe të hap dyer të reja për ëndrrat e mia".
+                            </p>
+                            <SPAN><br><br><br>
+                                Eliza Avdiu
+                            </br></br></br>
+                            </SPAN>
+                        </div>
+                        <div class="text">
+                            <p>
+                                "Eksperienca në B.I.T më ka ndihmuar shumë në zhvillimin e aftësive në Python. Trajnerja është munduar që ligjëratat t'i bëjë sa më cilësore për nga efikasiteti dhe qartësia".
+                            </p>
+                            <SPAN><br><br><br>
+                                Albulena Ramadani
+                            </br></br></br>
+                            </SPAN>
+                        </div>
+                        <div class="text">
+                            <p>
+                                "Me ndihmën dhe mentorimin e shkëlqyer të trajnerit, une arrita të fitoj dije në bazat e IOS Development, hap ky gjigand për mua, për fillimin e karrierës sime në fushën e zhvillimit të softuerit".
+                            </p>
+                            <SPAN><br><br><br>
+                                Taulant Zekaj
+                            </br></br></br>
+                            </SPAN>
+                        </div>
+                        <div class="text">
+                            <p>
+                                "Eksperienca në B.I.T ka qenë përtej pritshmërive personale. Njohuritë e fituara në Digital Marketing janë shumë të vlefshme dhe një përspektivë e re. Pjesëmarrja në këtë trajnim ishte një mundësi fantastike për të përparuar në karrierë".
+                            </p>
+                            <SPAN><br><br><br>
+                                Leart Gashi
+                            </br></br></br>
+                            </SPAN>
+                        </div>
+                    </div>
+                    <div class="imagejpg">
+                        <img src="images/photo1.png" id="one" class="picture active-pic" onclick="showReview()">
+                        <img src="images/photo2.png" id="two" class="picture" onclick="showReview()" >
+                        <img src="images/photo3.png" id="three" class="picture" onclick="showReview()">
+                        <img src="images/photo4.png" id="four" class="picture" onclick="showReview()">
+                        <img src="images/photo5.png" id="five" class="picture" onclick="showReview()">
+                    </div>
+                </div>
+            </div>
+            <script>
+                let Texts=document.getElementsByClassName("text");
+                let Pictures=document.getElementsByClassName("picture");
+                function showReview(){
+                    for(Picture of Pictures){
+                        Picture.classList.remove("active-pic");
+                    }
+                    for(Text of Texts){
+                        Text.classList.remove("active-text");
+                    }
+                let i=Array.from(Pictures).indexOf(event.target);
+                Pictures[i].classList.add("active-pic");
+                Texts[i].classList.add("active-text");
+            }
+            </script>
+        <footer >
+            <div class="container">
+              <!--<div class="contact-box">-->
+                <div class="contact-left">
+                    <h3 class="kontakti">Na Kontaktoni</h3>
+                    <form class="forma1">
+                        <input type="text" class="hapesira" placeholder="Emri dhe Mbiemri" required><br>
+                        <input type="email" class="hapesira" placeholder="Email" required><br>
+                        <input type="tel" id="phone" class="hapesira" name="phone" placeholder="Phone Number" required>
+                        <div class="hapesira1">
+                            <select id="digital" class="hapesira" name="digital">
+                                <option value="Dizajn Grafik">Digital Marketing</option>
+                                <option value="Dizajn Grafik">Graphic Design</option>
+                                <option value="Web Development">Full Stack</option>
+                                <option value="Python">Python</option>
+                                <option value="Java">JAVA</option>
+                            </select>
+                        </div>
+                        <button class="btn" >Apliko</button>
+                    </form>
+                </div>
+                <div class="contact-right">
+                    <h2 class="h2">Të dhënat:</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <address>
+                        <table class="table">
+                            <tr>
+                                <td>Email: </td>
+                                <td ><a style="color:white" href="mailto:besaitech@gmail.com">besaitech@gmail.com</a></td>
+                            </tr>
+                            <tr>
+                                <td>Phone: </td>
+                                <td>+383 49 175 286</td>
+                            </tr>
+                            <tr>
+                                <td>Adressa: </td>
+                                <td>Rr.Feronikeli-25, Drenas, Kosove, 13000</td>
+                            </tr>
+                        </table>
+                    </address>
+                    <br><br><br><br>
+                    <div class="socialIcons">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"> </i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"> </i></a>
+                        <a href="https://twitter.com/?lang=en-gb" target="_blank"><i class="fa-brands fa-twitter"> </i></a>
+                        <a href="https://gb.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"> </i></a>
+                    </div>
+                </div>
+            <!--</div>-->
+            </div>
+        </footer>
+        <script>
+            let text=document.getElementById("ekipi").innerHTML;
+            document.getElementById("ekipi").innerHTML=text.replace("Our Team", "Instruktorët tanë");
+            let texti=document.getElementById("studentat").innerHTML;
+            document.getElementById("studentat").innerHTML=texti.replace("What our Students Say", "Studentët e lumtur");
         
-    </div>
-    <div >
-        <div class="about-item">
-            <i class="fa fa-book" ></i>
-                <h2>Misioni</h2>
-                <hr>
-                <p >
-                Misioni ynë si Besa Institute of Technology është që në mënyrën më të mirë të mundshme të i 
-                përgatisim studentët tanë për tregun e punës lidhur me shërbimet të cilat i ofrojmë si dhe 
-                çdo herë të jemi në trend me zhvillimet e reja në këtë fushë.
-                </p>
-        </div>
-       
-        <div class="about-item">
-            <i class="fa fa-book"></i>
-                <h2>Objektivat</h2>
-                <hr>
-                <p>
-                Objektiva jonë kryesore si Besa Institute of Technology është që në një periudhë të afërt 
-                të bëhemi një nga qendrat profesionale më të mira në vend dhe jashtë si dhe gjithashtu të
-                ofrojmë sa më shumë programe studimi lidhur me fushë në t ë cilën jemi të thirrur.
-                </p>
-        </div>
-                    
-        <div class="about-item">
-            <i class="fa fa-book"></i>
-                <h2>Të arriturat</h2>
-                 <hr>
-                <p>
-                Deri tani formimin e tyre profesional ia kanë besuar Besa Institute of Technology mbi 1,500 persona 
-                të grupmoshave dhe profesioneve të ndryshme nga të gjitha viset shqiptare.
-                Atë që ne e konsiderojmë si një nga arritjet më të larta në secilin trajnim është fakti që në 
-                secilën fushë kemi pasur të rinj që, nga Evropa dhe SHBA kanë përfunduar trajnime online dhe tashmë janë 
-                sistemuar me shumë sukses në tregun e punës.
-                </p>
-        </div>
-    </div>
-</section>
-<div class="ourteam">
-  <div class="ourteam-body">
-      <h1>Our Team</h1>
-  </div>
-  <div class="body">
-  <div class="teams">
-      <img class="img" src="https://media.istockphoto.com/id/856599656/photo/passport-picture-of-a-smiling-turkish-businesswoman.jpg?s=612x612&w=0&k=20&c=dgETy-9neViQs7SATDTOOa80QOhVFcLIomBFRxWVN_8=" height="220px" width="180px">
-  
-      <div class="name"><h2>Arijesa Muja</h2></div>
-      <div class="working"><h3>Senior JavaScript Engineer</h3></div>
-      <div class="desription">Inxhiniere e JavaScript me përvojë shumëvjecare, e cila aktualisht është duke mbajtur trajnime rreth kësaj gjuhe skriptuese.</div>
-</div>
-
-  <div class="teams">
-      <img class="img" src="https://media.istockphoto.com/id/515630181/photo/portrait-of-a-smiling-woman-in-a-blue-shirt.jpg?s=612x612&w=0&k=20&c=NbRbAUPtralJJkkWpTxmFnyb_0x241dpbMd4pRjGe84="height="220px"  width="180px"> 
-      <div class="name"><h2>Agnesa Jashanica</h2></div>
-      <div class="working"><h3>Python Development</h3></div>
-      <div class="desription">Inxhiniere softueri me përvojë 4 vjeçare në programim. Aktualisht është duke punuar si Python Developer në B.I.T.</div>
-  </div>
-  <div class="teams">
-      <img class="img" src="https://thumbs.dreamstime.com/b/photo-document-passport-id-mature-caucasian-man-suit-white-shirt-126121929.jpg" height="220px" width="180px"> 
-      <div class="name"><h2>Arianit Gashi</h2></div>
-      <div class="working"><h3>Graphic Designer</h3></div>
-      <div class="desription">Graphic Designer me përvojë 10 vjeçare. Aktualisht është duke punuar me Adobe Photoshop dhe Adobe Ilustrator.</div>
-  </div>
-  <div class="teams">
-      <img class="img" src="https://thumbs.dreamstime.com/b/passport-document-id-photo-business-man-portrait-119717703.jpg" height="220px" width="180px"> 
-      <div class="name"><h2>Ardit Gjyrevci</h2></div>
-      <div class="working"><h3>Security Engineer</h3></div>
-      <div class="desription">Security Engineer me përvojë shumëvjeçare si në Web Security, App Security në “3cis j.s.c". Aktualisht duke punuar si Software Security. </div>
-  </div>
-  <div class="teams">
-      <img class="img" src="https://us.123rf.com/450wm/stylephotographs/stylephotographs2004/stylephotographs200401182/stylephotographs200401182.jpg?ver=6" height="220px" width="180px"> 
-      <div class="name"><h2>Ardi Zariqi</h2></div>
-      <div class="working"><h3>IOS Development</h3></div>
-      <div class="desription">Zhvillues i aplikacioneve IOS me përvojë 5 vjeçare. Punoi me aplikacione të njohura ndërkombëtare.</div>
-  </div>
-  <div class="teams">
-      <img class="img" src="https://st4.depositphotos.com/35580620/38766/i/600/depositphotos_387663176-stock-photo-photobooth-portrait-beautiful-brunette-caucasian.jpg" height="220px" width="180px"> 
-      <div class="name"><h2>Aferdita Kryeziu</h2></div>
-      <div class="working"><h3>HTML5 Engineer</h3></div>
-      <div class="desription">Eksperte e gjuhës skriptuese HTML me më shumë se 7 vite përvojë pune, mësimdhënie në nivel akademik. ​</div>
-  </div>
-</div>
-</div>
-</div>
-<div class="title"><h1>What our Students Say</h1></div>
-<div class="container">
-<div class="sheader">
-    <div class="sheader-text">
-    <div class="text active-text">
-        <p>
-           "Ky trajnim më ka ndihmuar që të përvetësoj njohuritë bazë në JavaScript. Kënaqësi ishte të jem tek B.I.T me një trajnere të mrekullueshme".
-        </p>
-        <SPAN><br><br><br>
-            Urim Kelmendi
-        </br></br></br>
-        </SPAN>
-    </div>
-    <div class="text">
-        <p>
-           "Trajnimi ne B.I.T ka qenë një ekperiencë mahnitëse. Kam mësuar shumë gjëra të shpjeguara në mënyrë të përkryer. Ky trajnim mbi të gjitha më ka ndihmuar të gjej veten dhe të hap dyer të reja për ëndrrat e mia".
-        </p>
-        <SPAN><br><br><br>
-            Eliza Avdiu
-        </br></br></br>
-        </SPAN>
-    </div>
-    <div class="text">
-        <p>
-            "Eksperienca në B.I.T më ka ndihmuar shumë në zhvillimin e aftësive në Python. Trajnerja është munduar që ligjëratat t'i bëjë sa më cilësore për nga efikasiteti dhe qartësia".
-        </p>
-        <SPAN><br><br><br>
-            Albulena Ramadani
-        </br></br></br>
-        </SPAN>
-    </div>
-    <div class="text">
-        <p>
-            "Me ndihmën dhe mentorimin e shkëlqyer të trajnerit, une arrita të fitoj dije në bazat e IOS Development, hap ky gjigand për mua, për fillimin e karrierës sime në fushën e zhvillimit të softuerit".
-        </p>
-        <SPAN><br><br><br>
-            Taulant Zekaj
-        </br></br></br>
-        </SPAN>
-    </div>
-    <div class="text">
-        <p>
-            "Eksperienca në B.I.T ka qenë përtej pritshmërive personale. Njohuritë e fituara në Digital Marketing janë shumë të vlefshme dhe një përspektivë e re. Pjesëmarrja në këtë trajnim ishte një mundësi fantastike për të përparuar në karrierë".
-        </p>
-        <SPAN><br><br><br>
-            Leart Gashi
-        </br></br></br>
-        </SPAN>
-    </div>
-    </div>
-    <div class="imagejpg">
-        <img src="C:\Users\Admin\Desktop\fotoag1.jpg" class="picture active-pic" onclick="showReview()">
-        <img src="C:\Users\Admin\Desktop\fotoag2.webp" class="picture" onclick="showReview()" >
-        <img src="C:\Users\Admin\Desktop\fotoag3.jpg" class="picture" onclick="showReview()">
-        <img src="C:\Users\Admin\Desktop\fotoag4.jpg" class="picture" onclick="showReview()">
-        <img src="C:\Users\Admin\Desktop\fotoag5.jpg" class="picture" onclick="showReview()">
-    </div>
-</div>
-</div>
-<script>
-let Texts=document.getElementsByClassName("text");
-let Pictures=document.getElementsByClassName("picture");
-function showReview(){
-    for(Picture of Pictures){
-        Picture.classList.remove("active-pic");
-    }
-    for(Text of Texts){
-        Text.classList.remove("active-text");
-    }
-    let i=Array.from(Pictures).indexOf(event.target);
-    Pictures[i].classList.add("active-pic");
-    Texts[i].classList.add("active-text");
-}
-</script>
-<footer >
-  <div class="container">
-          
-      <!--<div class="contact-box">-->
-          <div class="contact-left">
-               <h3 class="kontakti">Na Kontaktoni</h3>
-               <form class="forma1">
-               <input type="text" class="hapesira" placeholder="Emri dhe Mbiemri" required><br>
-               <input type="email" class="hapesira" placeholder="Email" required><br>
-               <input type="tel" id="phone" class="hapesira" name="phone" placeholder="Phone Number" required>
-               <div class="hapesira1">
-               <select id="digital" class="hapesira" name="digital">
-               <option value="Dizajn Grafik">Digital Marketing</option>
-               <option value="Dizajn Grafik">Graphic Design</option>
-               <option value="Web Development">Full Stack</option>
-               <option value="Python">Python</option>
-               <option value="Java">JAVA</option>
-               </select>
-               </div>
-               <button class="btn" >Apliko</button>
-               </form>
-          </div>
-          
-          <div class="contact-right">
-              <h2 class="h2">Të dhënat:</h2>
-              <br>
-              <br>
-              <br>
-              <address>
-                <table class="table">
-                  <tr>
-                      <td>Email: </td>
-                      <td ><a style="color:white" href="mailto:besaitech@gmail.com">besaitech@gmail.com</a></td>
-                  </tr>
-                  <tr>
-                      <td>Phone: </td>
-                      <td>+383 49 175 286</td>
-                  </tr>
-                  <tr>
-                      <td>Adressa: </td>
-                      <td>Rr.Feronikeli-25, Drenas, Kosove, 13000</td>
-                  </tr>
-                </table>
-            </address>
-                <br><br><br><br>
-                <div class="socialIcons">
-                    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"> </i></a>
-                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"> </i></a>
-                    <a href="https://twitter.com/?lang=en-gb" target="_blank"><i class="fa-brands fa-twitter"> </i></a>
-                    <a href="https://gb.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"> </i></a>
-                  </div>
-          </div>
-      <!--</div>-->
-  </div>
-  </footer>
-</body>
+            const paragraph="Besa Institute of Technology është qendër e trajnimeve profesionale, e specializuar në përgatitjen e pjesëmarrësve me njohuri praktike në secilin trajnim, tërësisht të bazuara në kërkesat e tregut aktual vendor dhe ndërkombëtar të punës";
+            const upper = /[A-Z]/g;
+            const found = paragraph.match(upper); 
+            console.log(found);
+          </script>
+    </body>
 </html>

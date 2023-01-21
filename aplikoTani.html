@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="js1.js"></script>
 
         <style>
         
@@ -42,6 +43,7 @@
             .maindiv {
                 height: 650px;
                 background-image: url("Foto6.png");
+                background-position: relative;
                 background-size: cover;
                 background-repeat: no-repeat;
                 display: flex;
@@ -63,7 +65,7 @@
 
             .submit {
                 width: 100%;
-                background-color: #D93D66;
+                background-color: #df2d45;
                 color: white;
                 font-weight: bold;
                 padding: 14px 20px;
@@ -94,10 +96,15 @@
                 text-align: center;
             }
 
+            .error {
+                color: red;
+                font-size: 15px;
+            }
+
         </style>
     </head>
     <body>
-        <header style="background-color:#D93D66">
+        <header style="background-color:#df2d45">
             <div id="container" style="margin-left:100px">
                 <img src="Logo.png" alt="logo" width="90px" height="90px">   
                 <p style="margin-left:10px;"  >Besa Institute of Technology</p>
@@ -108,25 +115,27 @@
             </form>
         </header>
         <div class="menu"> 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#news">About</a></li>
-            <li><a href="#contact">Digital Marketing</a>
-            <li><a href="#contact">Programming</a>
+            <ul>
+              <li><a href="Home.html">Home</a></li>
+              <li><a href="aboutUs1.html">About</a></li>
+              <li><a href="#contact">Programming</a>
                 <div class="nen-menu">
-                <ul>
-                    <li><a href="#">Java</a></li>
-                    <li><a href="#">Full Stack</a></li>
-                    <li><a href="#">Python</a></li>
-                    <li><a href="#">Mobile app</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="CyberSecurity.html">CyberSecurity</a></li>
+                        <li><a href="FullStackDevelopment.html">Full Stack</a></li>
+                        <li><a href="Python.html">Python</a></li>
+                        <li><a href="MobileApp.html">Mobile app</a></li>
+                        <li><a href="DigitalMarketing.html">Digital Marketing</a></li>
+                        <li><a href="GraphicDesign.html">Graphic Design</a></li>
+                    </ul>
                 </div>
-            </li>
-            <li><a href="#about">Graphic Design</a></li>
-            <li><a href="#">Apply here</a></li>
-            <li><a href="C:\Users\Albert\Desktop\FIEK\FIEK-II\Semestri_3\Web 1\Projekti\LogIn.html">Log In</a></li>
-        </ul>
+                </li>
+                <li><a href="aplikoTani.html">Apply here</a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="LogIn.html">Log In</a></li>
+            </ul>
         </div>
+
         <main>
             <div class="maindiv">
                 <div class="formdiv">
@@ -135,10 +144,13 @@
                         <p >Plotësoni formën në vijim me informatat tuaja dhe për cilin trajnim jeni të interesuar.</p>
                     </div>
                     <div>
-                        <form>
-                            <input type="text" class="inputtext" id="emri" maxlength="50" placeholder="Emri" required/>
-                            <input type="email" class="inputemail" id="email" required placeholder="Email" />
-                            <input type="tel" class="inputtel" id="tel" pattern="04[3-9][0-9]{6}" required placeholder="Tel."/>
+                        <form id="myForm" enctype="text/plain">
+                            <input type="text" id="emri" class="inputtext" maxlength="50" placeholder="Emri" required/>
+                            <div id="emriError" class="error"></div>
+                            <input type="email" id="email" class="inputemail" placeholder="Email" required/>
+                            <div id="emailError" class="error"></div>
+                            <input type="tel" id="tel" class="inputtel" pattern="04[3-9][0-9]{6}" placeholder="Tel." required/>
+                            <div id="telError" class="error"></div>
                             <Select id="Trajnimet" class="select" name="Trajnimet">
                                 <option value="Digital Marketing">Digital Marketing</option>
                                 <option value="Java">Java</option>
@@ -146,62 +158,64 @@
                                 <option value="Python">Python</option>
                                 <option value="Full stack">Full stack</option>
                             </Select>
-                            <input type="submit"class="submit" id="submit" value="Apliko"/>
+                            <input type="submit" id="submit" class="submit" value="Apliko" onclick="submitForm(event)">
                         </form>
                     </div>
                 </div>
             </div>
         </main>
-            <footer style="background-color: #ccc;">
-                <div class="container">
-                    <!--<div class="contact-box">-->
-                        <div class="contact-left">
-                            <h3 class="kontakti">Na Kontaktoni</h3>
-                            <form class="forma1">
-                                <input type="text" class="hapesira" placeholder="Emri dhe Mbiemri" required><br>
-                                <input type="email" class="hapesira" placeholder="Email" required><br>
-                                <input type="tel" id="phone" class="hapesira" name="phone" placeholder="Phone Number" required>
-                                <div class="hapesira1">
-                                    <select id="digital" class="hapesira" name="digital">
-                                        <option value="Digjital Marketing">Digital Marketing</option>
-                                        <option value="Dizajn Grafik">Dizajn Grafik</option>
-                                        <option value="Full stack">Full stack</option>
-                                        <option value="Python">Python</option>
-                                        <option value="Java">JAVA</option>
-                                    </select>
-                                </div>
-                                <button class="btn" >Apliko</button>
-                            </form>
+        <footer >
+            <div class="container">
+              <!--<div class="contact-box">-->
+                <div class="contact-left">
+                    <h3 class="kontakti">Na Kontaktoni</h3>
+                    <form class="forma1">
+                        <input type="text" class="hapesira" placeholder="Emri dhe Mbiemri" required><br>
+                        <input type="email" class="hapesira" placeholder="Email" required><br>
+                        <input type="tel" id="phone" class="hapesira" name="phone" placeholder="Phone Number" required>
+                        <div class="hapesira1">
+                            <select id="digital" class="hapesira" name="digital">
+                                <option value="Dizajn Grafik">Digital Marketing</option>
+                                <option value="Dizajn Grafik">Graphic Design</option>
+                                <option value="Web Development">Full Stack</option>
+                                <option value="Python">Python</option>
+                                <option value="Java">JAVA</option>
+                            </select>
                         </div>
-                        <div class="contact-right">
-                            <h2 class="h2">Të dhënat:</h2>
-                            <br>
-                            <br>
-                            <br>
-                              <table class="table">
-                                <tr>
-                                    <td>Email: </td>
-                                    <td><a href="mailto:besaitech@gmail.com" style="color: white;">besaitech@gmail.com</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Phone: </td>
-                                    <td>+383 49 175 286</td>
-                                </tr>
-                                <tr>
-                                    <td>Adressa: </td>
-                                    <td>Rr.Feronikeli-25, Drenas, Kosove, 13000</td>
-                                </tr>
-                              </table>
-                              <br><br><br><br>
-                              <div class="socialIcons">
-                                <a href="#"><i class="fa-brands fa-facebook"> </i></a>
-                                <a href="#"><i class="fa-brands fa-instagram"> </i></a>
-                                <a href="#"><i class="fa-brands fa-twitter"> </i></a>
-                                <a href="#"><i class="fa-brands fa-linkedin-in"> </i></a>
-                              </div>
-                        </div>
-                    <!--</div>-->
+                        <button class="btn" >Apliko</button>
+                    </form>
                 </div>
-            </footer>
+                <div class="contact-right">
+                    <h2 class="h2">Të dhënat:</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <address>
+                        <table class="table">
+                            <tr>
+                                <td>Email: </td>
+                                <td ><a style="color:white" href="mailto:besaitech@gmail.com">besaitech@gmail.com</a></td>
+                            </tr>
+                            <tr>
+                                <td>Phone: </td>
+                                <td>+383 49 175 286</td>
+                            </tr>
+                            <tr>
+                                <td>Adressa: </td>
+                                <td>Rr.Feronikeli-25, Drenas, Kosove, 13000</td>
+                            </tr>
+                        </table>
+                    </address>
+                    <br><br><br><br>
+                    <div class="socialIcons">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"> </i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"> </i></a>
+                        <a href="https://twitter.com/?lang=en-gb" target="_blank"><i class="fa-brands fa-twitter"> </i></a>
+                        <a href="https://gb.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"> </i></a>
+                    </div>
+                </div>
+            <!--</div>-->
+            </div>
+        </footer>
     </body>
 </html>

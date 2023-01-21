@@ -6,13 +6,19 @@ function validateForm() {
       if (!email) throw "Email field is required.";
       if (!password) throw "Password field is required.";
       if (!validateEmail(email)) throw "Invalid email address.";
-      if (password.length < 8) throw "Password must be at least 8 characters.";
+      validatePassword(password);
       return true;
   } catch (err) {
       alert(err);
       return false;
   }
 }
+
+function validatePassword(password) {
+  if(password.length < 8 || !/\d/.test(password) || !/[A-Z]/.test(password))
+    throw "Password must be at least 8 characters, contain one number and one uppercase letter.";
+}
+
 
 function validateEmail(email) {
   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -48,7 +54,7 @@ function submitForm(e) {
   } else {
       document.getElementById("telError").innerHTML = "";
   }
-  if (selekto.value.length !== "Zgjedhni trajnimin") {
+  if (selekto.value.length == "Zgjedhni trajnimin") {
     isValid = false;
     document.getElementById("selectError").innerHTML = "Zgjedhni nje trajnim qe deshironi ta ndjekni";
 } else {
@@ -57,7 +63,8 @@ function submitForm(e) {
 
   if (isValid) {
       // submit form
-      form.submit();
+      form.submit(); 
+      
   }
 }
 
@@ -72,8 +79,9 @@ window.onload = function() {
   }
 };
 
-//Per formen ne footer
 
+//Per formen ne footer
+/*
 $(document).ready(function() {
   $("btn").click(function(e) {
     e.preventDefault();
@@ -122,7 +130,8 @@ function validateEmail(email) {
 function Trajnimi(pyBenefits) {
   this.pyBenefits = pyBenefits;
 }
-
+*/
+/*
 //Krijimi i instancave të objekteve
 var pyTrajnimi = new Trajnimi(["Njohuri të avancuara për Python", "Praktikë pasi të përfundohet trajnimi", "Referencë pune nga kompania Sharp Group"]);
 var pyCertifikata = new Trajnimi(["1 certifikatë nga B.I.T","Certifikata online"]);
@@ -181,5 +190,5 @@ function Employee(name, title, salary) {
 let employee1 = new Employee("Mike", "Developer", "$75,000");
 let employee2 = new Employee("Emily", "Designer", "$70,000");
 let employee3 = new Employee("Jacob", "Manager", "$85,000");
-
+*/
 

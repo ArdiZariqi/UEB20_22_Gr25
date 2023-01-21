@@ -1,10 +1,5 @@
-
-
-// Pjesa e 
-
-
+// Pjesa e jQuery
 $(document).ready(function(){
-
     //selektoret---------------------------------------------------
     $(".sidebar").css('background-color', '#df2d45');
 
@@ -69,13 +64,13 @@ $(document).ready(function(){
     $(".content").mouseenter(function()
     {
         
-        $(".content").css('color', '#df2d45');
+        $(".content").css('font-weight', 'bold').css('color', 'black');
     })
     
     $(".content").mouseleave(function()
     {
         
-        $(".content").css('color', '#4f4f4f');
+        $(".content").css('font-weight', 'normal');
     })
 
     
@@ -144,4 +139,42 @@ $(document).ready(function(){
                     height: "250px", 
                     left: "10px"}, "slow");
     });
+    //callBack//callback
+   $(".sheader-text").click(function(){
+     $(".sheader-text").hide(1000,function(){
+      $(".sheader-text").show(3000);
+     });
+     
+
+   });
+   $("#pho").click(function(){
+     $("#pho").hide(1000,function(){
+      $("#pho").show(3000);
+     });
+     
+
+   });
+   //jQuery me HTML-------------------------------------------
+   
+   //get     -----returns the text content of selected elements
+   $("#container").click(function(){
+    alert("Text: " + $(".texti1").text());
+  });
+  //set    ----Sets the text content of selected elements
+  $(".texti1").click(function(){
+    $(".texti1").html("<b>B.I.T.</b>");
+  });
+  //add   ----
+  $("#btnnn").click(function(){
+    $("#idrt").append(" <li>Java<li>");
+  });
+  
+
+  //remove ---allows us to filter the elements to be removed
+  $("#btn22").click(function(){
+    $(".sidebar").remove(".sidebar");
+  });
+
+   
+
 });
