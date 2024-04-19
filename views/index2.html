@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Our Students Say</title>
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+
+<body>
+    <div class="title">
+        <h1>What our Students Say</h1>
+    </div>
+    <div class="container">
+        <div class="sheader">
+            <div class="sheader-text">
+                <div class="text active-text">
+                    <p>
+                        "Ky trajnim më ka ndihmuar që të përvetësoj njohuritë bazë në JavaScript. Kënaqësi ishte të jem
+                        tek B.I.T me një trajnere të mrekullueshme".
+                    </p>
+                    <SPAN><br><br><br>
+                        Urim Kelmendi
+                        </br></br></br>
+                    </SPAN>
+                </div>
+                <div class="text">
+                    <p>
+                        "Trajnimi ne B.I.T ka qenë një ekperiencë mahnitëse. Kam mësuar shumë gjëra të shpjeguara në
+                        mënyrë të përkryer. Ky trajnim mbi të gjitha më ka ndihmuar të gjej veten dhe të hap dyer të
+                        reja për ëndrrat e mia".
+                    </p>
+                    <SPAN><br><br><br>
+                        Eliza Avdiu
+                        </br></br></br>
+                    </SPAN>
+                </div>
+                <div class="text">
+                    <p>
+                        "Eksperienca në B.I.T më ka ndihmuar shumë në zhvillimin e aftësive në Python. Trajnerja është
+                        munduar që ligjëratat t'i bëjë sa më cilësore për nga efikasiteti dhe qartësia".
+                    </p>
+                    <SPAN><br><br><br>
+                        Albulena Ramadani
+                        </br></br></br>
+                    </SPAN>
+                </div>
+                <div class="text">
+                    <p>
+                        "Me ndihmën dhe mentorimin e shkëlqyer të trajnerit, une arrita të fitoj dije në bazat e IOS
+                        Development, hap ky gjigand për mua, për fillimin e karrierës sime në fushën e zhvillimit të
+                        softuerit".
+                    </p>
+                    <SPAN><br><br><br>
+                        Taulant Zekaj
+                        </br></br></br>
+                    </SPAN>
+                </div>
+                <div class="text">
+                    <p>
+                        "Eksperienca në B.I.T ka qenë përtej pritshmërive personale. Njohuritë e fituara në Digital
+                        Marketing janë shumë të vlefshme dhe një përspektivë e re. Pjesëmarrja në këtë trajnim ishte një
+                        mundësi fantastike për të përparuar në karrierë".
+                    </p>
+                    <SPAN><br><br><br>
+                        Leart Gashi
+                        </br></br></br>
+                    </SPAN>
+                </div>
+            </div>
+            <div class="imagejpg">
+                <img src="../images/photo1.png" class="picture active-pic" onclick="showReview()">
+                <img src="../images/photo2.png" class="picture" onclick="showReview()">
+                <img src="../images/photo3.png" class="picture" onclick="showReview()">
+                <img src="../images/photo4.png" class="picture" onclick="showReview()">
+                <img src="../images/photo5.png" class="picture" onclick="showReview()">
+            </div>
+        </div>
+    </div>
+    <script>
+        let Texts = document.getElementsByClassName("text");
+        let Pictures = document.getElementsByClassName("picture");
+        function showReview() {
+            for (Picture of Pictures) {
+                Picture.classList.remove("active-pic");
+            }
+            for (Text of Texts) {
+                Text.classList.remove("active-text");
+            }
+            let i = Array.from(Pictures).indexOf(event.target);
+            Pictures[i].classList.add("active-pic");
+            Texts[i].classList.add("active-text");
+        }
+    </script>
+</body>
+
+</html>
